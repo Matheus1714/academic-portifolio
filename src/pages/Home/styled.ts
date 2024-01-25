@@ -37,6 +37,10 @@ export const CursorAnimation = styled.div`
             color: ${(props) => props.theme.blue};
         }
     }
+
+    @media screen and (max-width: 900px){
+        display: block;
+    }
 `
 
 export const Phrase = styled.div`
