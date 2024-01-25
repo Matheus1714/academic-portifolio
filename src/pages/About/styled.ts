@@ -166,7 +166,7 @@ export const PointTime = styled.li`
     }
 
     @media screen and (max-width: 900px) {
-        --card-width: calc(100% - var(--spacing));
+        /* --card-width: calc(100% - var(--spacing)); */
         margin-bottom: 2rem;
 
         &:nth-child(2n + 1){
