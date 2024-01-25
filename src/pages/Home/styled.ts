@@ -14,12 +14,14 @@ export const Container = styled.div`
 `
 
 export const CursorAnimation = styled.div`
+    --font-size: 6rem;
+
     display: inline-block;
 
     padding: 4rem 0;
 
     h1{
-        font-size: 6rem;
+        font-size: var(--font-size);
 
         letter-spacing: 10px;
         border-right: 8px solid ${(props) => props.theme.blue};
@@ -31,7 +33,7 @@ export const CursorAnimation = styled.div`
             ${cursor} .4s step-end infinite alternate;
 
         span{
-            font-size: 6rem;
+            font-size: var(--font-size);
             color: ${(props) => props.theme.blue};
         }
     }
