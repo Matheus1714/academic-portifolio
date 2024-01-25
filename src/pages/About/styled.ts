@@ -1,0 +1,183 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
+
+export const Profile = styled.div`
+    display: flex;
+    gap: 4rem;
+
+    padding: 4rem 0;
+
+    @media screen and (max-width: 800px){
+        flex-direction: column;
+    }
+`
+
+export const ProfileAuthor = styled.div`
+    text-align: center;
+    img{
+        border-radius: 9999px;
+        height: 15rem;
+
+        margin-bottom: 1rem;
+    }
+    p{
+        font-size: 1rem;
+        font-weight: 800;
+
+        &:nth-child(3){
+            color: ${(props) => props.theme.blue};
+            margin-top: 0.25rem;
+        }
+    }
+`
+
+export const ProfileContent = styled.div`
+    h1{
+        font-size: 2rem;
+        color: ${(props) => props.theme.blue};
+        margin-bottom: 1rem;
+    }
+`
+
+export const Timeline = styled.ul`
+    list-style: none;
+    position: relative;
+
+    &:before{
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+
+        background: ${(props) => props.theme.blue};
+        border-radius: 9999px;
+
+        top: 0;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background-color: ${(props) => props.theme.blue};
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-2px);
+        border-radius: 9999px;
+    }
+
+    @media screen and (max-width: 800px) {
+        &:before, &:after{
+            left: 0;
+        }
+    }
+`
+
+export const PointTime = styled.li`
+
+    --card-width: 16rem;
+    --ball-diameter: 1rem;
+    --spacing: 8rem;
+    --line-height: 4px;
+    --line-width: calc(var(--spacing) / 2);
+
+    width: var(--card-width);
+    position: relative;
+
+    &:before{
+        content: "";
+        position: absolute;
+        width: var(--ball-diameter);
+        height: var(--ball-diameter);
+        background: ${(props) => props.theme.blue};
+        border-radius: 9999px;
+    }
+
+    &:after{
+        content: "";
+        position: absolute;
+        width: var(--line-width);
+        height: var(--line-height);
+        background: ${(props) => props.theme.blue};
+        border-radius: 9999px;
+
+        top: 0;
+    }
+
+    &:nth-child(2n + 1){
+        text-align: right;
+        transform: translateX(calc(0px - var(--card-width) / 2 - var(--spacing) / 2)) translateY(2rem);
+        
+        &:before{
+            transform: translate(0, 50%);
+        }
+        &:after{
+            right: 0;
+            transform: translate(calc(var(--spacing) / 2), calc(var(--ball-diameter) - var(--line-height) / 2));
+        }
+
+        h1, h2, p{
+            padding-right: 1rem;
+        }
+    }
+    &:nth-child(2n){
+        text-align: left;
+        transform: translateX(calc(var(--card-width) / 2 + var(--spacing) / 2)) translateY(-2rem);
+
+        &:before{
+            transform: translate(-100%, 50%);
+        }
+        &:after{
+            left: 0;
+            transform: translate(calc(0px - var(--spacing) / 2), calc(var(--ball-diameter) - var(--line-height) / 2));
+        }
+
+        h1, h2, p{
+            padding-left: 1rem;
+        }
+    }
+    h1{
+        font-size: 2rem;
+        color: ${(props) => props.theme.blue};
+        margin-bottom: 0.5rem;
+    }
+    h2{
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    @media screen and (max-width: 800px) {
+        --card-width: calc(100% - var(--spacing));
+        margin-bottom: 2rem;
+
+        &:nth-child(2n + 1){
+            text-align: left;
+            
+            &:before{
+                transform: translate(-100%, 50%);
+            }
+            &:after{
+                left: 0;
+                transform: translate(calc(0px - var(--spacing) / 2), calc(var(--ball-diameter) - var(--line-height) / 2));
+            }
+
+            h1, h2, p{
+                padding-left: 1rem;
+            }
+        }
+
+        &:nth-child(2n), &:nth-child(2n + 1){
+            transform: translateX(calc(var(--spacing) / 2)) translateY(2rem);
+        }
+    }
+`
