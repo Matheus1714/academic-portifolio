@@ -1,56 +1,48 @@
-import { Container, PointTime, Profile, ProfileAuthor, ProfileContent, Timeline } from "./styled"
+import { EnumExperienceType, about } from "../../data/about"
+import { Container, PointTime, Profile, ProfileAuthor, ProfileContent, SectionTitle, Timeline } from "./styled"
 
 export function About(){
-    const experiences = [
-        {
-            year: 2023,
-            title: "ITA",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-        },
-        {
-            year: 2023,
-            title: "ITA",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-        },
-        {
-            year: 2023,
-            title: "ITA",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-        },
-        {
-            year: 2023,
-            title: "ITA",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-        },
-        {
-            year: 2023,
-            title: "ITA",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-        },
-        {
-            year: 2023,
-            title: "ITA",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-        },
-    ]
+    const {
+        experiences,
+        name,
+        scientificName,
+        imgProfile,
+        description,
+    } = about
+
+    const academicExperiences = experiences.filter(experience => experience.experienceType === EnumExperienceType.ACADEMIC)
+    const professionalExperiences = experiences.filter(experience => experience.experienceType === EnumExperienceType.PROFESSIONAL)
 
     return (
         <Container>
             <Profile>
                 <ProfileAuthor>
-                    <img src="http://github.com/Matheus1714.png" />
-                    <p>Maheus Silva Martins Mota</p>
-                    <p>Mota, M. S. M.</p>
+                    <img src={imgProfile.url} alt={imgProfile.alt} />
+                    <p>{name}</p>
+                    <p>{scientificName}</p>
                 </ProfileAuthor>
                 <ProfileContent>
                     <h1>About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    <p>{description}</p>
                 </ProfileContent>
             </Profile>
+
+            <SectionTitle>Academic Experience</SectionTitle>
             <Timeline>
-                {experiences.map(experience => (
-                    <PointTime>
-                        <h1>{experience.year}</h1>
+                {academicExperiences.map(experience => (
+                    <PointTime key={experience.content + experience.title}>
+                        <h1>{experience.endYear}</h1>
+                        <h2>{experience.title}</h2>
+                        <p>{experience.content}</p>
+                    </PointTime>
+                ))}
+            </Timeline>
+
+            <SectionTitle>Professinal Experience</SectionTitle>
+            <Timeline>
+                {professionalExperiences.map(experience => (
+                    <PointTime key={experience.content + experience.title}>
+                        <h1>{experience.startYear}</h1>
                         <h2>{experience.title}</h2>
                         <p>{experience.content}</p>
                     </PointTime>

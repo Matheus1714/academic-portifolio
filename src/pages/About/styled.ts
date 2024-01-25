@@ -7,6 +7,13 @@ export const Container = styled.div`
     align-items: center;
 `
 
+export const SectionTitle = styled.h1`
+    font-size: 3rem;
+    color: ${(props) => props.theme.blue};
+    font-weight: 800;
+    margin: 2rem 0;
+`
+
 export const Profile = styled.div`
     display: flex;
     gap: 4rem;
@@ -93,6 +100,8 @@ export const PointTime = styled.li`
 
     width: var(--card-width);
     position: relative;
+
+    margin-bottom: 2rem;
 
     &:before{
         content: "";
