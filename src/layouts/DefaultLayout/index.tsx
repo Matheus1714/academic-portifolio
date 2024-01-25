@@ -1,5 +1,5 @@
-import { Container } from "./styled"
 import { Outlet } from "react-router-dom"
+import { Container } from "./styled"
 
 export function Layout(){
     return (
