@@ -1,9 +1,10 @@
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import { Layout } from "./layouts/DefaultLayout";
+import { About } from "./pages/About";
 import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
-import { About } from "./pages/About";
+import { Publications } from "./pages/Publications";
 
 export function Router(){
     return (
@@ -11,6 +12,7 @@ export function Router(){
             <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/publications" element={<Publications />} />
                 <Route path="*" element={<NotFound />}/>
             </Route>
         </Routes>
