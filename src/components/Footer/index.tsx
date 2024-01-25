@@ -1,22 +1,21 @@
+import { social } from "../../data/social";
 import { Container, SocialLinks } from "./styled";
-import GithubIcon from "../../assets/github.svg"
-import LattesIcon from "../../assets/lattes.svg"
-import LinkedinIcon from "../../assets/linkedin.svg"
+
 
 export function Footer(){
+    
+    const date = new Date();
+    const year = date.getFullYear()
+
     return (
         <Container>
-            <p>@2024 Academic Portal for Personal Management</p>
+            <p>@{year} Academic Portal for Personal Management</p>
             <SocialLinks>
-                <a target="_blank" href="http://lattes.cnpq.br/4944089934682851">
-                    <img src={LattesIcon} alt="" />
-                </a>
-                <a target="_blank" href="https://github.com/Matheus1714">
-                    <img src={GithubIcon} alt="" />
-                </a>
-                <a target="_blank" href="https://www.linkedin.com/in/matheus-mota-44b21a17b/">
-                    <img src={LinkedinIcon} alt="" />
-                </a>
+                {social.map((media) =>(
+                    <a target="_blank" href={media.url} key={media.url}>
+                        <img src={media.iconPath} alt={media.alt} />
+                    </a>
+                ))}
             </SocialLinks>
         </Container>
     )
