@@ -13,7 +13,7 @@ export const Profile = styled.div`
 
     padding: 4rem 0;
 
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 900px){
         flex-direction: column;
     }
 `
@@ -76,7 +76,7 @@ export const Timeline = styled.ul`
         border-radius: 9999px;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
         &:before, &:after{
             left: 0;
         }
@@ -156,7 +156,7 @@ export const PointTime = styled.li`
         margin-bottom: 0.5rem;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
         --card-width: calc(100% - var(--spacing));
         margin-bottom: 2rem;
 
