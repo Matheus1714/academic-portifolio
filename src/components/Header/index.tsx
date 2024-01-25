@@ -1,7 +1,37 @@
 import { NavLink } from "react-router-dom";
-import { Container, HeaderLinks, PortalLogo } from "./styled";
+import { Container, HeaderBar, HeaderLinks, PortalLogo, HeaderBarLinks, BarButton } from "./styled";
+import { useState } from "react";
+
+import BarIcon from '../../assets/bars.svg';
+import CloseIcon from '../../assets/close.svg'
 
 export function Header(){
+
+    const routes = [
+        {route: "/", title: "Home"},
+        {route: "/about", title: "About"},
+        {route: "/publications", title: "Publications"},
+        {route: "/presentations", title: "Presentations"},
+        {route: "/projects", title: "Projects"},
+    ]
+
+    const [click, setClick] = useState(false)
+
+    const handleClick = () => {
+        setClick(!click)
+    }
+
+    const renderLinks = () => {
+        return routes.map((route) => 
+            <NavLink 
+                to={route.route} 
+                key={route.title}
+                title={route.title}
+            >
+                {route.title}
+            </NavLink>
+        )
+    }
 
     return (
         <Container>
@@ -11,13 +41,20 @@ export function Header(){
                     <p>Academic Portal</p>
                 </PortalLogo>
             </NavLink>
+
             <HeaderLinks>
-                <NavLink to="/" title="Home">Home</NavLink>
-                <NavLink to="/about" title="About">About</NavLink>
-                <NavLink to="/publications" title="Publications">Publications</NavLink>
-                <NavLink to="/presentations" title="Presentations">Presentations</NavLink>
-                <NavLink to="/projects" title="Projects">Projects</NavLink>
+                {renderLinks()}
             </HeaderLinks>
+
+            <HeaderBar>
+                <BarButton onClick={handleClick}>
+                    <img 
+                        src={click ? CloseIcon : BarIcon}
+                        alt=""
+                    />
+                </BarButton>
+                {click ? <HeaderBarLinks>{renderLinks()}</HeaderBarLinks> : ""}
+            </HeaderBar>
         </Container>
     )
 }
