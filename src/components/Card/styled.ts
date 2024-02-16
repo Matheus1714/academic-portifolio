@@ -34,6 +34,13 @@ export const CardContentContainer = styled.p`
     padding: 0.5rem 0;
 `
 
+export const CardImageContainer = styled.img`
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+`
+
 export const CardButtonContainer = styled.a`
     text-decoration: none;
     display: block;

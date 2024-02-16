@@ -8,6 +8,7 @@ export function Presentations(){
         <Container>
             {presentations.map((presentation : PresentationProps) => (
                 <Card.Root key={presentation.title}>
+                    <Card.Image url={presentation.image.url} description={presentation.image.description} />
                     <Card.Title title={presentation.title} />
                     <Card.Subtitle subtitle={presentation.date} />
                     <Card.Content content={presentation.summary} />
