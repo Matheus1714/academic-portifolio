@@ -1,3 +1,4 @@
+import { HighlightedText } from "../../components/Highlight"
 import { EnumExperienceType, about } from "../../data/about"
 import { Container, PointTime, Profile, ProfileAuthor, ProfileContent, SectionTitle, Timeline } from "./styled"
 
@@ -23,7 +24,9 @@ export function About(){
                 </ProfileAuthor>
                 <ProfileContent>
                     <h1>About Me</h1>
-                    <p>{description}</p>
+                    <p>
+                        <HighlightedText text={description} />
+                    </p>
                 </ProfileContent>
             </Profile>
 
