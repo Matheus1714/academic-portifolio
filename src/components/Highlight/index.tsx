@@ -9,7 +9,6 @@ export function HighlightedText ({ text }: HighlightProps) {
     const regex = /\*\*(.*?)\*\*/g;
     
     const parts = text.split(regex);
-    console.log(parts)
     
     return parts.map((part, index) => {
       if (index%2) {
