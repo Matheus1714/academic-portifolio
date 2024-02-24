@@ -1,15 +1,17 @@
 import { NavLink } from "react-router-dom";
-import { Container, HeaderBar, HeaderLinks, PortalLogo, HeaderBarLinks, BarButton } from "./styled";
+import { Container, HeaderBar, HeaderLinks, HeaderBarLinks, BarButton } from "./styled";
 import { useState } from "react";
 
 import BarIcon from '../../assets/bars.svg';
 import CloseIcon from '../../assets/close.svg'
+import { Logo } from "../Logo";
 
 export function Header(){
 
     const routes = [
         {route: "/", title: "Home"},
         {route: "/about", title: "About"},
+        {route: "/disciplines", title: "Disciplines"},
         {route: "/publications", title: "Publications"},
         {route: "/presentations", title: "Presentations"},
         {route: "/projects", title: "Projects"},
@@ -36,10 +38,7 @@ export function Header(){
     return (
         <Container>
             <NavLink to="/" title="Home">
-                <PortalLogo>
-                    <h1>MOTA, M. S. M</h1>
-                    <p>Academic Portal</p>
-                </PortalLogo>
+                <Logo />
             </NavLink>
 
             <HeaderLinks>

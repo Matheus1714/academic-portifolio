@@ -15,19 +15,6 @@ export const Container = styled.header`
     }
 `
 
-export const PortalLogo = styled.div`
-    h1{
-        color: ${(props) => props.theme.blue};
-        font-weight: 800;
-        font-size: 1.25rem;
-    }
-    p{
-        color: ${(props) => props.theme.white};
-        font-weight: 800;
-        font-size: 0.875rem;
-    }
-`
-
 export const HeaderLinks = styled.div`
     display: flex;
     gap: 1rem;
