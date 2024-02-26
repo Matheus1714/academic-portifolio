@@ -1,4 +1,5 @@
 export interface PresentationProps {
+    id: string
     image: Record<string, string>
     title: string
     summary: string
@@ -11,6 +12,7 @@ export interface PresentationProps {
 
 export const presentations: PresentationProps[] = [
     {
+        id: "blockchain-testing",
         image: {
             url: "https://www.testing-whiz.com/wp-content/uploads/2022/08/Top-Things-You-Should-Know-About-Blockchain-Testing.jpg",
             alt: ""
@@ -29,6 +31,7 @@ export const presentations: PresentationProps[] = [
         ]
     },
     {
+        id: "mutation-testing",
         image: {
             url: "https://cdn.educba.com/academy/wp-content/uploads/2019/10/Mutation-Testing.png",
             alt: ""
@@ -50,6 +53,7 @@ export const presentations: PresentationProps[] = [
         ]
     },
     {
+        id: "blockchain-ssa",
         image: {
             url: "https://images.cointelegraph.com/cdn-cgi/image/format=auto,onerror=redirect,quality=90,width=1434/https://s3.cointelegraph.com/storage/uploads/view/36d5255132340b02636ffe46d137d25f.jpg",
             alt: ""
@@ -71,6 +75,7 @@ export const presentations: PresentationProps[] = [
         ]
     },
     {
+        id: "blockchain-ethics",
         image: {
             url: "https://www.rhyslindmark.com/content/images/2019/07/image-1.png",
             alt: ""
