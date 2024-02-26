@@ -1,18 +1,18 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-`
+`;
 
 export const SectionTitle = styled.h1`
     font-size: 3rem;
     color: ${(props) => props.theme.blue};
     font-weight: 800;
     margin: 2rem 0;
-`
+`;
 
 export const Profile = styled.div`
     display: flex;
@@ -23,7 +23,7 @@ export const Profile = styled.div`
     @media screen and (max-width: 900px){
         flex-direction: column;
     }
-`
+`;
 
 export const ProfileAuthor = styled.div`
     text-align: center;
@@ -42,7 +42,7 @@ export const ProfileAuthor = styled.div`
             margin-top: 0.25rem;
         }
     }
-`
+`;
 
 export const ProfileContent = styled.div`
     h1{
@@ -50,7 +50,7 @@ export const ProfileContent = styled.div`
         color: ${(props) => props.theme.blue};
         margin-bottom: 1rem;
     }
-`
+`;
 
 export const Timeline = styled.ul`
     list-style: none;
@@ -88,7 +88,7 @@ export const Timeline = styled.ul`
             left: 0;
         }
     }
-`
+`;
 
 export const PointTime = styled.li`
 
@@ -126,7 +126,7 @@ export const PointTime = styled.li`
     &:nth-child(2n + 1){
         text-align: right;
         transform: translateX(calc(0px - var(--card-width) / 2 - var(--spacing) / 2)) translateY(2rem);
-        
+
         &:before{
             transform: translate(0, 50%);
         }
@@ -171,7 +171,7 @@ export const PointTime = styled.li`
 
         &:nth-child(2n + 1){
             text-align: left;
-            
+
             &:before{
                 transform: translate(-100%, 50%);
             }
@@ -189,4 +189,4 @@ export const PointTime = styled.li`
             transform: translateX(calc(var(--spacing) / 2)) translateY(2rem);
         }
     }
-`
+`;

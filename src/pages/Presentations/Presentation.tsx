@@ -1,3 +1,3 @@
-export function Presentation(){
-    return <></>
+export function Presentation() {
+  return <></>;
 }
