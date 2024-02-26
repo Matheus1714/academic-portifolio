@@ -1,5 +1,5 @@
 import { CardButtonContainer } from './styled';
-import { resolvePath, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 interface CardButtonProps {
   title: string;
