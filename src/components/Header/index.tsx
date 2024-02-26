@@ -3,7 +3,6 @@ import {
   Container,
   HeaderBar,
   HeaderLinks,
-  PortalLogo,
   HeaderBarLinks,
   BarButton,
 } from './styled';
@@ -11,6 +10,7 @@ import { useState } from 'react';
 
 import BarIcon from '../../assets/bars.svg';
 import CloseIcon from '../../assets/close.svg';
+import { Logo } from '../Logo';
 
 export function Header() {
   const routes = [
@@ -38,10 +38,7 @@ export function Header() {
   return (
     <Container>
       <NavLink to="/" title="Home">
-        <PortalLogo>
-          <h1>MOTA, M. S. M</h1>
-          <p>Academic Portal</p>
-        </PortalLogo>
+        <Logo />
       </NavLink>
 
       <HeaderLinks>{renderLinks()}</HeaderLinks>
