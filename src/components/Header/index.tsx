@@ -7,6 +7,7 @@ import {
   BarButton,
 } from './styled';
 import { useState } from 'react';
+import { SITE } from '../../config';
 
 import BarIcon from '../../assets/bars.svg';
 import CloseIcon from '../../assets/close.svg';
@@ -38,7 +39,7 @@ export function Header() {
   return (
     <Container>
       <NavLink to="/" title="Home">
-        <Logo />
+        <Logo title={SITE.title} subtitle={SITE.subtitle} />
       </NavLink>
 
       <HeaderLinks>{renderLinks()}</HeaderLinks>
