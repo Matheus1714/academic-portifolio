@@ -3,6 +3,8 @@ import { Container } from './styled';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 
+import { social } from '../../data/social';
+
 export function Layout() {
 
   const routes = [
@@ -17,7 +19,7 @@ export function Layout() {
     <Container>
       <Header routes={routes} />
       <Outlet />
-      <Footer />
+      <Footer social={social} />
     </Container>
   );
 }
