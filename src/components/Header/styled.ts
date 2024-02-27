@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.header`
     position: relative;
@@ -13,7 +13,7 @@ export const Container = styled.header`
         all: unset;
         cursor: pointer;
     }
-`
+`;
 
 export const HeaderLinks = styled.div`
     display: flex;
@@ -26,7 +26,7 @@ export const HeaderLinks = styled.div`
 
         &:hover{
             color: ${(props) => props.theme.blue};
-            
+
         }
     }
 
@@ -42,19 +42,19 @@ export const HeaderLinks = styled.div`
     @media screen and (max-width: 900px){
         display: none;
     }
-`
+`;
 
 export const HeaderBar = styled.div`
     display: none;
     @media screen and (max-width: 900px){
         display: block;
     }
-`
+`;
 
 export const BarButton = styled.a`
     all: unset;
     cursor: pointer;
-`
+`;
 
 export const HeaderBarLinks = styled(HeaderLinks)`
     display: flex;
@@ -74,4 +74,4 @@ export const HeaderBarLinks = styled(HeaderLinks)`
     @media screen and (max-width: 500px){
         width: 100%;
     }
-`
+`;

@@ -1,17 +1,17 @@
-import { StrongText } from "./styled";
+import { StrongText } from './styled';
 
 interface HighlightProps {
   text: string;
 }
 
-export function HighlightedText ({ text }: HighlightProps) {
+export function HighlightedText({ text }: HighlightProps) {
   const renderHighlightedText = (text: string) => {
     const regex = /\*\*(.*?)\*\*/g;
-    
+
     const parts = text.split(regex);
-    
+
     return parts.map((part, index) => {
-      if (index%2) {
+      if (index % 2) {
         const word = part.replace(/\*\*/g, '');
         return <StrongText key={index}>{word}</StrongText>;
       } else {
@@ -20,9 +20,5 @@ export function HighlightedText ({ text }: HighlightProps) {
     });
   };
 
-  return (
-    <>
-      {renderHighlightedText(text)}
-    </>
-  )
+  return <>{renderHighlightedText(text)}</>;
 }

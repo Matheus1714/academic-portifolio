@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.footer`
     padding: 1rem;
     margin-top: auto;
     text-align: center;
-`
+`;
 
 export const SocialLinks = styled.div`
     margin-top: 1rem;
@@ -18,4 +18,4 @@ export const SocialLinks = styled.div`
             margin-left: 0;
         }
     }
-`
+`;

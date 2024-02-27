@@ -1,9 +1,9 @@
-import { Container } from "./styled"
+import { Container } from './styled';
 
-export function NotFound(){
-    return (
-        <Container>
-            <h1>Not Found</h1>
-        </Container>
-    )
+export function NotFound() {
+  return (
+    <Container>
+      <h1>Not Found</h1>
+    </Container>
+  );
 }

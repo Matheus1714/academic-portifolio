@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
     min-height: 100vh;
@@ -10,4 +10,4 @@ export const Container = styled.div`
     @media screen and (max-width: 500px){
         padding: 0 1rem;
     }
-`
+`;

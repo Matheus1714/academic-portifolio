@@ -1,13 +1,9 @@
-import { CardSubtileContainer } from "./styled";
+import { CardSubtileContainer } from './styled';
 
 interface CardSubtitleProps {
-    subtitle: string
+  subtitle: string;
 }
 
 export function CardSubtitle({ subtitle }: CardSubtitleProps) {
-    return (
-        <CardSubtileContainer>
-            {subtitle}
-        </CardSubtileContainer>
-    )
+  return <CardSubtileContainer>{subtitle}</CardSubtileContainer>;
 }

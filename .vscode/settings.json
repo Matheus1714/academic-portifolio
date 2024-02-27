@@ -1,0 +1,7 @@
+{
+    "window.zoomLevel": 2,
+    "prettier.configPath": "./.prettierrc.cjs",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "files.autoSave": "onWindowChange"
+}

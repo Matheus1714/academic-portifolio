@@ -1,9 +1,8 @@
-import { Logo } from './index'
-import { Meta, StoryObj } from '@storybook/react'
+import { Logo } from '.';
 
 export default {
-    title: 'Components/Logo',
-    component: Logo,
-} as Meta
+  title: 'Logo',
+  component: Logo,
+};
 
-export const Default: StoryObj = {}
+export const Default = () => <Logo />;

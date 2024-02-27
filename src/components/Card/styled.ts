@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CardRootContainer = styled.div`
     width: 25rem;
@@ -18,28 +18,28 @@ export const CardRootContainer = styled.div`
     @media screen and (max-width: 500px){
         width: 100%;
     }
-`
+`;
 
 export const CardTitleContainer = styled.h1`
     color: ${(props) => props.theme.blue};
     font-size: 1.5rem;
-`
+`;
 
 export const CardSubtileContainer = styled.h2`
     color: ${(props) => props.theme.white};
     font-size: 1.25rem;
-`
+`;
 
 export const CardContentContainer = styled.p`
     padding: 0.5rem 0;
-`
+`;
 
 export const CardImageContainer = styled.img`
     margin-bottom: 1rem;
     width: 100%;
     height: 20rem;
     object-fit: cover;
-`
+`;
 
 export const CardButtonContainer = styled.a`
     text-decoration: none;
@@ -69,4 +69,4 @@ export const CardButtonContainer = styled.a`
     &:active{
         background: ${(props) => props.theme.blueActivate};
     }
-`
+`;
