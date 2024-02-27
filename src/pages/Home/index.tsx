@@ -1,17 +1,20 @@
-import { Container, CursorAnimation, Phrase } from './styled';
+import { CursorAnimation } from '../../components/Cursor';
+import { Phrase } from '../../components/Phrase';
+import { HOME } from '../../config';
+import { Container } from './styled';
+
 
 export function Home() {
   return (
     <Container>
-      <CursorAnimation>
-        <h1>
-          Matheus <span>Mota</span>
-        </h1>
-      </CursorAnimation>
-      <Phrase>
-        <h2>“Constant improvement is better than delayed perfection”</h2>
-        <h2>Mark Tawain</h2>
-      </Phrase>
+      <CursorAnimation
+        firstText={HOME.firstText}
+        secondText={HOME.secondText}
+      />
+      <Phrase
+        author={HOME.phrase.author}
+        text={HOME.phrase.text}
+      />
     </Container>
   );
 }
