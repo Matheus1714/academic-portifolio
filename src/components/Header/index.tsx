@@ -13,14 +13,17 @@ import BarIcon from '../../assets/bars.svg';
 import CloseIcon from '../../assets/close.svg';
 import { Logo } from '../Logo';
 
-export function Header() {
-  const routes = [
-    { route: '/', title: 'Home' },
-    { route: '/about', title: 'About' },
-    { route: '/publications', title: 'Publications' },
-    { route: '/presentations', title: 'Presentations' },
-    { route: '/projects', title: 'Projects' },
-  ];
+interface RouteItem {
+  route: string;
+  title: string;
+  default?: boolean;
+}
+interface HeaderProps {
+  routes?: RouteItem[];
+  groupLinks?: boolean;
+}
+
+export function Header({ routes, groupLinks = false }: HeaderProps) {
 
   const [click, setClick] = useState(false);
 
@@ -29,26 +32,38 @@ export function Header() {
   };
 
   const renderLinks = () => {
-    return routes.map((route) => (
+    return routes?.map((route) => (
       <NavLink to={route.route} key={route.title} title={route.title}>
         {route.title}
       </NavLink>
     ));
   };
 
+  let defaultRoute = routes?.find(route => route.default);
+
+  if(!defaultRoute){
+    defaultRoute = {
+      route: '/',
+      title: 'Home'
+    }
+  }
+
   return (
     <Container>
-      <NavLink to="/" title="Home">
-        <Logo title={SITE.title} subtitle={SITE.subtitle} />
+      <NavLink to={defaultRoute?.route} title={defaultRoute?.title}>
+        <Logo
+          title={SITE.title}
+          subtitle={SITE.subtitle}
+        />
       </NavLink>
-
+      
       <HeaderLinks>{renderLinks()}</HeaderLinks>
 
       <HeaderBar>
         <BarButton onClick={handleClick}>
           <img src={click ? CloseIcon : BarIcon} alt="" />
         </BarButton>
-        {click ? <HeaderBarLinks>{renderLinks()}</HeaderBarLinks> : ''}
+        {click && <HeaderBarLinks>{renderLinks()}</HeaderBarLinks>}
       </HeaderBar>
     </Container>
   );
