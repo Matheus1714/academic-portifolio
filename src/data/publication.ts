@@ -21,4 +21,16 @@ export const publications: PublicationProps[] = [
     doi: 'https://doi.org/10.1007/978-3-031-28332-1_48',
     url: 'https://link.springer.com/chapter/10.1007/978-3-031-28332-1_48',
   },
+  {
+    title:
+      'Case Study of an Interdisciplinary Academic Project for Reading Fluency Analysis',
+    conference:
+      'International Conference on Information Technology-New Generations ',
+    publicationYear: 2024,
+    publisher: 'Springer International Publishing',
+    abstract:
+      'During the first semester of 2023, at the Aeronautics Institute of Technology (ITA, Brazil), an Interdisciplinary Problem-Based Learning (IPBL) Case Study was conducted. This case study involved 14 undergraduate and graduate students, distributed across 3 disciplines of Electronic and Computer Engineering graduate course at ITA. The project aimed to conceptualize, model, and develop a portion of a distributed database system. During this period, it was possible to develop a prototype for audio collection using the following technologies: Database System, Artificial Intelligence, Machine Learning, Blockchain and Kubernetes. The final system was based on a similar project developed for the Brazilian Ministry of Education. This project aims to automatically analyze the reading fluency of elementary school children. The project described in this article focuses on creating a computational infrastructure for real-time audio collection. The audio, collected through the locally developed interface, should be stored on a server for subsequent automatic analysis using a Machine Learning and Artificial Intelligence model. The project was completed in 16 weeks, during an academic semester, and the SCRUM Framework was applied for project management. The primary contribution of this work was the joint utilization of the Agile Method (with SCRUM) and other mentioned technologies to test, manage, and develop the case study, resulting in a Literacy Fluency Analysis system, including a functional software prototype for audio acquisition.',
+    doi: 'https://doi.org/10.1007/978-3-031-56599-1_28',
+    url: 'https://link.springer.com/chapter/10.1007/978-3-031-56599-1_28',
+  },
 ];
